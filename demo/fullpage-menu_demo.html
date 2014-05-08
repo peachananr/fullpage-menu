@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Full Page Menu by Pete R. | The Pete Design</title>
+	<meta name="title" content="jQuery Full Page Menu by Pete R. | The Pete Design" />
+	<meta name="description" content="Create a Full Page, Fully CSS3 Animated Menu for your Navigation with Full Page Menu" />
+	<link rel="image_src" href="/images/fullpage-menu_image.jpg" />
+
+	<meta content="http://www.thepetedesign.com/demos/fullpage-menu_demo.html" property="og:url" />
+	<meta content="http://www.thepetedesign.com/images/fullpage-menu_image.jpg" property="og:image" />
+	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
+	<meta name="author" content="Pete R.">
+	<link rel="canonical" href="http://www.thepetedesign.com/demos/fullpage-menu_demo.html" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='fullpage-menu.css' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="jquery.fullpage-menu.js"></script>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      background: #fff;
+      padding: 0;
+      text-align: center;
+      font-family: 'Open Sans';
+      position: relative;
+      margin: 0;
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizelegibility;
+    }
+    
+    a {
+      color: black;
+    }
+    
+    .header {
+      padding: 30px 0 0;
+      float: left;
+      width: 100%;
+      background: white;
+    }
+    
+    .wrapper {
+    	height: auto !important;
+    	height: 100%;
+    	margin: 0 auto; 
+    	overflow: hidden;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+    
+    h1, h2 {
+      width: 100%;
+      float: left;
+    }
+    h1 {
+      margin-top: 100px;
+      color: #999;
+      margin-bottom: 5px;
+      font-size: 70px;
+      font-weight: 100;
+    }
+    h2 {
+      padding: 00px 20px 30px 20px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      letter-spacing: 0px;
+      color: #888;
+      font-size: 20px;
+      line-height: 160%;
+      font-weight: 100;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    
+    
+    .pointer {
+      color: #00B0FF;
+      font-family: 'Pacifico';
+      font-size: 24px;
+      margin-top: 15px;
+      position: absolute;
+      top: 130px;
+      right: -40px;
+    }
+    .pointer2 {
+      color: #00B0FF;
+      font-family: 'Pacifico';
+      font-size: 24px;
+      margin-top: 15px;
+      position: absolute;
+      top: 130px;
+      left: -40px;
+    }
+    pre {
+      margin: 80px auto;
+    }
+    pre code {
+      padding: 35px;
+      border-radius: 5px;
+      font-size: 15px;
+      background: rgba(0,0,0,0.1);
+      border: rgba(0,0,0,0.05) 5px solid;
+      max-width: 500px;
+    }
+
+
+    .main {
+      float: left;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    
+    .main h1 {
+      padding:20px 50px 10px;
+      float: left;
+      width: 100%;
+      font-size: 60px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      font-weight: 100;
+      margin: 0;
+      padding-top: 25px;
+      font-family: 'Open Sans';
+      letter-spacing: -1px;
+      text-transform: capitalize;
+    }
+   
+    .main h1.demo1 {
+      background: #1ABC9C;
+    }
+    
+    .reload.bell {
+      font-size: 12px;
+      padding: 20px;
+      width: 45px;
+      text-align: center;
+      height: 47px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+    }
+    
+    .reload.bell #notification {
+      font-size: 25px;
+      line-height: 140%;
+    }
+    
+    .reload, .btn{
+      display: inline-block;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      display: inline-block;
+      line-height: 100%;
+      padding: 0.7em;
+      text-decoration: none;
+      width: 100px;
+      line-height: 140%;
+      font-size: 17px;
+      font-family: Open Sans;
+      font-weight: bold;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background-color: #4D90FE;
+      background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+      background-image: linear-gradient(top,#4d90fe,#4787ed);
+      border: 1px solid #3079ED;
+      color: #FFF;
+    }
+    .reload:hover{
+      background: #317af2;
+    }
+    .btn {
+      width: 200px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background-color: #4D90FE;
+      background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+      background-image: linear-gradient(top,#4d90fe,#4787ed);
+      border: 1px solid #3079ED;
+      color: #FFF;
+    }
+    .btn-normal {
+        width: 200px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-color: #4D90FE;
+        background-image: -webkit-linear-gradient(top,#fff,#fefefe);
+        background-image: linear-gradient(top,#fff,#fefefe);
+        border: 1px solid #eee;
+        color: #333;
+        margin-right: 5px;
+    }
+    
+    .clear {
+      width: auto;
+    }
+    .btn:hover, .btn:hover {
+      background: #317af2;
+    }
+    
+    .btn-normal:hover {
+        background: #efefef;
+    }
+    .btns {
+      min-height: 50px;
+      width: 100%;
+      margin: 50px auto;
+      float: left;
+    }
+    .credit {
+      text-align: center;
+      color: #888;
+      padding: 10px 10px;
+      margin: 0 0 0 0;
+      float: left;
+      width: 100%;
+    }
+    .credit a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+    
+    .back {
+      position: absolute;
+      top: 48px;
+      left: 0;
+      text-align: center;
+      display: block;
+      padding: 7px;
+      width: 100%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      background:#f5f5f5;
+      font-weight: bold;
+      font-size: 13px;
+      color: #888;
+      -webkit-transition: all 200ms ease-out;
+      -moz-transition: all 200ms ease-out;
+      -o-transition: all 200ms ease-out;
+      transition: all 200ms ease-out;
+    }
+    .back:hover {
+      background: #eee;
+    }
+  
+    
+    .page-container {
+      float: left;
+      width: 100%;
+      margin: 0 auto 300px;
+      position: relative;
+    }
+    
+    .header {
+      overflow: hidden;
+      clear: both;
+    }
+    
+    #btns {
+      text-align: center;
+      margin: 50px auto;
+      height: 50px;
+      overflow: hidden;
+      float: left;
+      width: 100%;
+    }
+    
+    
+    .main {
+      position: relative;
+      padding-top: 47px;
+    }
+  
+   
+    body .custom-navbar {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 15px 15px;
+      text-align: right;
+      box-sizing: border-box;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 101;
+      border-bottom: 1px solid #f1f1f2;
+    }
+
+    body .fm-button:hover {
+      border: none;
+      color: #000;
+    }
+
+    body .fm-button {
+      cursor: pointer;
+      display: block;
+      padding: 0;
+      position: relative;
+      top: auto;
+      color: #333;
+      right: auto;
+    }
+	</style>
+	<script>
+	  $(document).ready( function() {
+	    $(".sidemenu").fullpageMenu();
+	    
+	    $("#click-me").click(function() {
+        $(".sidemenu").openMenu();
+        return false;
+      });
+	  });
+		
+	</script>
+</head>
+<body>
+  <div class="wrapper">
+	  <div class="main">
+	    <div class="header">
+        <h1>jQuery Full Page Menu</h1>
+        <h2>Create a Full Page, Fully CSS3 Animated Menu for your Navigation with Full Page Menu</h2>
+        <p class="credit">Created by <a href="http://www.thepetedesign.com">Pete R.</a>, Founder of <a href="http://www.bucketlistly.com" target="_blank">BucketListly</a></p>
+        <div class="btns">
+          <a id="click-me" class="btn-normal btn" href="#">Show Me!</a>
+  	      <a class="reload btn" href="https://github.com/peachananr/fullpage-menu">Download on Github</a>
+  	    </div>
+  	  </div>
+  	  
+      <div class="page-container">
+        <div class="custom-navbar"><a  class="fm-button" href="#">Menu</a></div>
+        <div class="sidemenu">
+          <ul class="fm-first-level">
+            <li><a href="#menu1">My Bucket List</a></li>
+            <li><a href="#menu2">BucketListly Blog</a></li>
+          </ul>
+          <nav id="menu1" class="active">
+            <a target="_blank" href="http://www.bucketlistly.com/achievements/bungee-off-victoria-falls-107918">
+              <span class="subtitle">Finally, I decided to take on my first bungee jump ever (!) and I chose Victoria Falls..</span>
+              Bungee Off Victoria Falls
+            </a>
+            <a target="_blank" href="http://www.bucketlistly.com/achievements/go-on-a-safari-in-africa-107917">
+              <span class="subtitle">My first safari, I chose to sleep in the bush for 4 days in the Kruger National Park..</span>
+              Go on a Safari in Africa
+            </a>
+            <a target="_blank" href="http://www.bucketlistly.com/achievements/travel-to-soweto-south-africa-127954">
+              <span class="subtitle">On 11th April 2014, my first day arriving in South Africa..</span>
+              Travel to Soweto
+            </a>
+            <a target="_blank" href="http://www.bucketlistly.com/achievements/travel-to-south-africa-107916">
+              <span class="subtitle">For my South African trip, I started off in Johannesburg doing a 4 hours bike tour..</span>
+              Travel to South Africa
+            </a>
+            <a target="_blank" href="http://www.bucketlistly.com/achievements/explore-the-australian-outback-82380">
+              <span class="subtitle">Kings Canyon, one of the not so common trip for people heading to Uluru..</span>
+              Explore the Australian Outback
+            </a>
+          </nav>
+          <nav id="menu2">
+            <a target="_blank" href="http://blog.bucketlistly.com/post/82789979663/australia-part-3-the-kings-canyon-solo">
+              <span class="subtitle">Great times don’t last forever, and so here is the final part of my Australian backpacking trip..</span>
+              The Kings Canyon Rim Walk
+            </a>
+            <a target="_blank" href="http://blog.bucketlistly.com/post/76525139501/photo-essay-zhangjiajie-avatars-mountains">
+              <span class="subtitle">I decided to go back to the No 1 Natural bridge and sat there for a few hours absorbing everything..</span>
+              ZhangJiaJie (Avatar Mountains)
+            </a>
+            <a target="_blank" href="http://blog.bucketlistly.com/post/67843428144/trekking-the-himalayas-annapurna-base-camp-in-7">
+              <span class="subtitle">It’s amazing how time flies. Six months ago, I decided to take a leap of faith and start traveling alone, and in no time..</span>
+              Trekking the Himalayas in 7 Days
+            </a>
+            <a target="_blank" href="http://blog.bucketlistly.com/post/62418127132/4-days-traveling-around-the-majestic-myanmar-a">
+              <span class="subtitle">The sole reason why I decided to go to Myanmar was because I have always wanted to see Bagan in person..</span>
+              Myanmar from Mandalay to Bagan
+            </a>
+            <a target="_blank" href="http://blog.bucketlistly.com/post/59584109323/incredible-india-a-solo-travelers-journal-3">
+              <span class="subtitle">Today we will see the Taj Mahal in its gloriousness..</span>
+              Incredible India
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <a class="back" href="http://www.thepetedesign.com/#plugins">Back to The Pete Design</a>
+    <a href="https://github.com/peachananr/fullpage-menu"><img style="position: absolute; top: 47px; right: 0; border: 0; z-index: 15;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+  </div>
+</body>
+</html>
