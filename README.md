@@ -10,7 +10,7 @@ Created by [Pete R.](http://www.thepetedesign.com), Founder of [Travelistly](htt
 
 
 ## Demo
-[View demo](http://www.thepetedesign.com/demos/fullpage-menu_demo_demo.html)
+[View demo](http://www.thepetedesign.com/demos/fullpage-menu_demo.html)
 
 ## Compatibility
 Modern browsers such as Chrome, Firefox, and Safari on both desktop and mobile have been tested. 
